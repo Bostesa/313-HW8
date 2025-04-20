@@ -1,7 +1,7 @@
 CC = gcc
 CXX = g++
-CFLAGS = -Wall
-CXXFLAGS = -Wall
+C_FLAGS = -Wall -std=c99 -m32 -O0
+CXX_FLAGS = -Wall -m32 -O0
 RM = rm -f
 
 all: cpp_test c_test
@@ -26,4 +26,3 @@ matrix.o: matrix.c matrix.h
 clean:
 	$(RM) *.o cpp_test c_test
 
-.PHONY: all clean
